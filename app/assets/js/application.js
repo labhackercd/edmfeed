@@ -1,13 +1,13 @@
 $(function () {
 
-    var hashtag = 'tonacamara';
+    var hashtag = 'edemocracia';
     $('.hashtag').html('#'+hashtag);
   
   
     var feed = new Instafeed({
       get: 'tagged',
       tagName: hashtag,
-      limit: 12,
+      limit: 16,
       resolution: 'standard_resolution',
       clientId: '580e9844a5a3431a80641d571f8af4ce',
       target: 'instagram',
