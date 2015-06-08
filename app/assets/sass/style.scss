@@ -1,0 +1,377 @@
+@import 'app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
+
+
+@font-face {
+    font-family: 'besom';
+    src: url('../fonts/BESOM-FREE-FONT.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+$dark-blue: #C5CD67;
+$dark-gray: #313131;
+$blue: #008BC5;
+$green: #472F26;
+
+#C5CD67
+
+hr {
+  border: 0px;
+  height: 54px;
+  width: 90%;
+  background-position: center;
+  background-size: contain;
+  background-image: url('../img/faixa_branca_1.png');
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-family: besom;
+}
+
+header {
+  border: 0;
+  height: 350px;
+  //background-color: #d7d5d5;
+  text-align: center;
+  img.logo {
+    width: 150px;
+    margin-top: 50px;
+    max-width: 80%;
+  }
+  .title {
+    h1 {
+      -webkit-transform: rotate(358deg);
+      -moz-transform: rotate(358deg);
+      -o-transform: rotate(358deg);
+      writing-mode: lr-tb;
+    }    
+    color: $dark-blue;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 741px;
+    min-height: 106px;
+    margin-top: 25px;
+    background-image: url('../img/faixa_tinta_1.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: 100% 100%;
+    .hashtag {
+      color: white;
+    }
+  }
+}
+
+#instagram {
+  font-family: 'besom';
+  font-size: 1.2em;
+  display: none;
+  position: relative;
+}
+
+#tt-frame {
+  display: none !important;
+}
+
+.in-content {
+  display: none;
+}
+
+.seemore {
+  position: absolute;
+  right: 0;
+  bottom: -35px;
+  margin-right: 25px;
+}
+
+.tt {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  .content {
+    background-image: url('../img/faixa_tinta_2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    height: 200px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    .in-content {
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: center;
+      align-items: center;
+      .pic {
+        text-align: center;
+        width: 150px;
+        .photo {
+          width: 90px;
+          height: 90px;
+          -moz-border-radius: 50%; 
+          -webkit-border-radius: 50%; 
+          border-radius: 50%;
+          background-size: cover;
+          border: 5px solid white;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      .ct {
+        width: 300px;
+        text-align: left;
+        flex-grow: 1;
+        flex-shrink: 0;
+        position: relative;
+        word-wrap: break-word;
+        .user {
+          span.name{
+            font-weight: bold;
+            font-size: 1.8em;
+          }
+          span.nickname {
+            margin-left: 5px;
+            font-weight: lighter;
+            color: lighten($dark-gray, 30%);
+          }         
+        }
+        a.user {
+          color: $dark-gray;
+          text-decoration: none;
+        }
+        .tweet {
+          color: lighten($dark-gray, 10%);
+          .twitter-emoji {
+            width: 20px;
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+        }
+        .time {
+          color: lighten($dark-gray, 30%);
+          position: absolute;
+          top: 0;
+          right: 0;
+          cursor: pointer;
+          abbr {
+            cursor: pointer;
+          }
+        }
+        .action-btns {
+          display: none;
+          position: absolute;
+          right: 0;
+          bot: 0;
+          i {
+            margin-left: 10px;
+          }
+          a {
+            color: lighten($dark-gray, 10%);
+            &:hover {
+              color: lighten($dark-gray, 30%);
+            }
+          }
+        }
+      }
+    }
+  }
+  .icon {
+    float: right;
+    max-width: 100%;
+  }
+  h1 {
+    color: $dark-blue;
+    span {
+      color: $green;
+    }
+  }
+}
+
+#youtube {
+  h1 {
+    color: $dark-blue;
+    margin-left: 85px;
+    .hashtag {
+      color: $green;
+    }
+  }
+  margin-top: 60px;  
+  .content {
+    margin-top: -72px;
+    background-image: url('../img/faixa_tinta_3_2.png');
+    background-repeat-y: initial;
+    background-position: top;
+    background-size: 100%;
+    .in-content-yt {
+      padding-top: 60px;
+      //height: 90%;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      .vid {
+        margin-top: 10px;
+      }
+      .l {
+        .vid {
+          height: 50%;
+          margin-top: 20px;
+        }
+        /*.vid:nth-child(2) {
+          margin-top: 12px;
+        }*/
+      }
+    }
+  }
+}
+
+a.edm-d:hover {
+  opacity: 0.7;
+}
+
+//Loader
+
+$squarew: 15px;
+$squareh: 15px;
+$squaremargin: 5px;
+$loaderw: $squarew * 3 + $squaremargin *2;
+$loaderh: $squareh * 3 + $squaremargin *2;
+$delayenter: 0.3s;
+$topenter: -10px;
+
+@mixin transition($value) {
+  -webkit-transition: $value ;
+   -moz-transition: $value ;
+          transition: $value ;
+}
+
+@mixin delay( $delay ) {
+  -webkit-animation-delay: $delay;
+   -moz-animation-delay: $delay;
+  animation-delay: $delay;
+}
+@-webkit-keyframes enter{
+  0%   { 
+    opacity: 0;
+    top: $topenter;
+  }
+  5%   { 
+    opacity: 1;
+    top: 0px;
+  }
+  50.9% { 
+    opacity: 1;
+    top: 0px;
+  }
+  55.9% { 
+    opacity: 0;
+    top: - $topenter;
+  }
+}
+@keyframes enter{
+  0%   { 
+    opacity: 0;
+    top: $topenter;
+  }
+  5%   { 
+    opacity: 1;
+    top: 0px;
+  }
+  50.9% { 
+    opacity: 1;
+    top: 0px;
+  }
+  55.9% { 
+    opacity: 0;
+    top: - $topenter;
+  }
+}
+@-moz-keyframes enter{
+  0%   { 
+    opacity: 0;
+    top: $topenter;
+  }
+  5%   { 
+    opacity: 1;
+    top: 0px;
+  }
+  50.9% { 
+    opacity: 1;
+    top: 0px;
+  }
+  55.9% { 
+    opacity: 0;
+    top: - $topenter;
+  }
+}
+
+
+.loader{
+  margin-left: auto;
+  margin-right: auto;
+  height: 120px;
+  width: 60px;
+  margin-top: 50px;
+}
+.square{
+  background: $blue;
+  width: $squarew;
+  height: $squareh;
+  float: left;
+  top: $topenter;
+  margin-right: $squaremargin;
+  margin-top: $squaremargin;
+  position:relative;
+  opacity: 0;
+  -webkit-animation: enter 6s infinite;
+  animation: enter 6s infinite;
+}
+.enter{
+  top: 0px;
+  opacity: 1;
+}
+.square:nth-child(1){
+  @include delay(6 * $delayenter);
+}
+.square:nth-child(2){
+ @include delay(7 * $delayenter);
+}
+.square:nth-child(3){
+  @include delay(8 * $delayenter);
+  background: #fdc96f;
+}
+.square:nth-child(4){
+  @include delay(3 * $delayenter);
+}
+.square:nth-child(5){
+  @include delay(4 * $delayenter);
+}
+.square:nth-child(6){
+  @include delay(5 * $delayenter);
+}
+.square:nth-child(7){
+  }
+.square:nth-child(8){
+  @include delay(1 * $delayenter);
+}
+.square:nth-child(9){
+  @include delay(2 * $delayenter);
+}
+.clear{
+  clear: both;
+ }
+.last{
+   margin-right:0;
+}
